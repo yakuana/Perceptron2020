@@ -26,15 +26,6 @@ class NeuralNetwork:
         for i in range(len(self.output_list_expected)):
             output_node = OutputNode(i, input_nodes_list, self.output_list_expected[i])
 
-            # # Sum up weights for current OutputNode index 
-            # output_node.weigh_sums() 
-
-            # # Get and store activation function results in OutputNode 
-            # output_node.activation_function()
-
-            # # Get the error
-            # error = output_node.get_error() 
-
             # Count the number of epochs 
             count = 0 
 

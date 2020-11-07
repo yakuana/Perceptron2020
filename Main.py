@@ -4,25 +4,14 @@ import random
 
 def main(): 
     node_pairs_list = read_file("digit-examples-all.txt")
-    #total number of pairs = 5620
 
-    #FOR 10/90 SPLIT
-    print("Split: 10% train, 90% test")
-    train_set_size = 5620 // 10
-    
+    #FOR 70/30 SPLIT
+    print("Split: 70% train, 30% test")
+    train_set_size = (5620 // 10) * 7
+
     training_set = node_pairs_list[0 : train_set_size + 1]
     test_set = node_pairs_list[train_set_size + 1 :]
-
-     ###### WOOOOOOORWKKKK ON THIS SHIYT  
-
-
-
-
-
-
-
-
-
+    
     weights = [] 
 
     for i in range(64):

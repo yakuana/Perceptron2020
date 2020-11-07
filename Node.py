@@ -63,15 +63,6 @@ class OutputNode:
         return self.output
     
     def get_error(self):
-        ###### WOOOOOOORWKKKK ON THIS SHIYT  
-
-
-
-
-
-
-
-
         #need to access list of actual output[self.index] above is placeholder
         #error = expected output - actual output
         error = self.expected_output - self.output
@@ -80,15 +71,7 @@ class OutputNode:
        
    
     def backpropogation(self):
-         ###### WOOOOOOORWKKKK ON THIS SHIYT  
-
-
-
-
-
-
-
-
+        ###### WOOOOOOORWKKKK ON THIS SHIYT  
 
         sigmoid = 1 / (1 + (E_VALUE ** -(self.weighted_sum)))
         
@@ -99,7 +82,7 @@ class OutputNode:
         
         for i in range(len(self.input_list)):
     
-            new_weight = self.input_list[i].weights[self.index] + (0.01 * self.get_error() * self.input_list[i].input_value * sigmoid_deriv)
+            new_weight = self.input_list[i].weights[self.index] + (0.1 * self.get_error() * self.input_list[i].input_value * sigmoid_deriv)
             
             # Update weight in InputNode's weight list  
             self.input_list[i].weights[self.index] = new_weight
