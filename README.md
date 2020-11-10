@@ -37,6 +37,3 @@ How to Run:
 	set the value of "train_split" in line 7 of Main.py to an int between 1-9. For example, if you want to train 70% and test
 	30% of the examples, set "train_split" equal to 7. If you want to train 60% and test 40%, set "train_split"
 	equal to 6. And so on. Then, run main() and wait for the Euclidean distance to print out.
-
-Description of code:
-

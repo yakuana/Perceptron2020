@@ -72,7 +72,7 @@ class NeuralNetwork:
         # Stores the error for each output 
         final_error = 0.0 
 
-         # Loop through input list
+        # Loop through input list
         for i in range(len(self.input_list)): 
             input_node = InputNode(self.input_list[i], self.weights_list[i])
 
