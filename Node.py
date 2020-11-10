@@ -82,7 +82,7 @@ class OutputNode:
         
         for i in range(len(self.input_list)):
     
-            new_weight = self.input_list[i].weights[self.index] + (0.1 * self.get_error() * self.input_list[i].input_value * sigmoid_deriv)
+            new_weight = self.input_list[i].weights[self.index] + (0.01 * self.get_error() * self.input_list[i].input_value * sigmoid_deriv)
             
             # Update weight in InputNode's weight list  
             self.input_list[i].weights[self.index] = new_weight

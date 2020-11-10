@@ -30,7 +30,7 @@ class NeuralNetwork:
             count = 0 
 
             # Do 100 epochs of back propogation 
-            while count < 100: 
+            while count < 10: 
                 # Sum up weights for current OutputNode index 
                 output_node.weigh_sums() 
 
