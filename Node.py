@@ -57,6 +57,7 @@ class OutputNode:
     def activation_function(self):
         global E_VALUE 
 
+
         # Activation function 
         self.output = 1 / (1 + (E_VALUE ** -(self.weighted_sum)))
         
@@ -71,11 +72,7 @@ class OutputNode:
        
    
     def backpropogation(self):
-        ###### WOOOOOOORWKKKK ON THIS SHIYT  
-
         sigmoid = 1 / (1 + (E_VALUE ** -(self.weighted_sum)))
-        
-        #maybe make sigmoid the global var instead of e???
         sigmoid_deriv = sigmoid * (1.0 - sigmoid)
 
         final_weights = []

@@ -1,5 +1,6 @@
 from Node import InputNode, OutputNode
 import math
+import random
 
 class NeuralNetwork:
     '''
@@ -21,6 +22,14 @@ class NeuralNetwork:
             input_node = InputNode(self.input_list[i], self.weights_list[i])
 
             input_nodes_list.append(input_node)
+        
+        
+        #make bias node
+        bias_input = 1.0
+        bias_weights = ([random.uniform(-1, 1) for x in range(10)])
+        bias_node = InputNode(bias_input, bias_weights)
+        input_nodes_list.append(bias_node)
+        self.weights_list.append(bias_weights)
 
         # Create output nodes 
         for i in range(len(self.output_list_expected)):
